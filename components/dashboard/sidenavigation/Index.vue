@@ -3,7 +3,7 @@
     class="scrollbar bg-white h-screen overflow-y-auto top-0 lg:relative"
     :class="[
       style[mobilePosition],
-      open
+      state.open
         ? 'w-8/12 absolute z-40 sm:w-5/12 lg:hidden'
         : 'hidden lg:block lg:w-64 lg:z-auto',
     ]"
@@ -22,6 +22,7 @@ import SidenavHeader from './Header.vue'
 export default {
   name: 'SideNavigation',
   components: { SidenavItems, SidenavHeader },
+  inject: ['state'],
   props: {
     mobilePosition: {
       type: String,
@@ -35,11 +36,6 @@ export default {
         right: 'right-0',
       },
     }
-  },
-  computed: {
-    open() {
-      return this.$store.state.dashboard.open
-    },
   },
 }
 </script>

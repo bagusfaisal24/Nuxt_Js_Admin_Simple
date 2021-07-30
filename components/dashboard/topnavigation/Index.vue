@@ -152,7 +152,7 @@
           <a href="#" class="block relative">
             <img
               alt="Jonathan Ilunga"
-              src="https://res.cloudinary.com/beloved/image/upload/v1623599101/Assets/ilunga_xrvvfm.jpg"
+              src="/images/9.jpg"
               class="h-10 mx-auto object-cover rounded-full w-10"
             />
           </a>

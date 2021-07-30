@@ -170,7 +170,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1621639962/Assets/1_o63yua.jpg"
+                src="/images/5.jpg"
                 alt="Guy"
               />
             </a>
@@ -184,7 +184,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/2_ix3pmz.jpg"
+                src="/images/6.jpg"
                 alt="Max"
               />
             </a>
@@ -198,7 +198,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/3_iscinv.jpg"
+                src="/images/7.jpg"
                 alt="Charles"
               />
             </a>
@@ -212,7 +212,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/4_iauuag.jpg"
+                src="/images/8.jpg"
                 alt="Jade"
               />
             </a>
@@ -406,7 +406,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1621639962/Assets/1_o63yua.jpg"
+                src="/images/5.jpg"
                 alt="Guy"
               />
             </a>
@@ -420,7 +420,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/2_ix3pmz.jpg"
+                src="/images/6.jpg"
                 alt="Max"
               />
             </a>
@@ -434,7 +434,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/3_iscinv.jpg"
+                src="/images/7.jpg"
                 alt="Charles"
               />
             </a>
@@ -448,7 +448,7 @@
                   object-cover
                   ring-2 ring-white
                 "
-                src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/4_iauuag.jpg"
+                src="/images/8.jpg"
                 alt="Jade"
               />
             </a>
@@ -1140,7 +1140,7 @@
               <a href="#" class="block relative">
                 <img
                   alt="profil"
-                  src="https://res.cloudinary.com/beloved/image/upload/v1621639962/Assets/1_o63yua.jpg"
+                  src="/images/2.jpg"
                   class="mx-auto object-cover rounded-full h-10 w-10"
                 />
               </a>
@@ -1153,10 +1153,10 @@
                     ml-2
                   "
                 >
-                  Charlie Rabiller
+                  Maurice
                 </span>
                 <span class="text-sm text-gray-400 dark:text-gray-300 ml-2">
-                  Hey John ! Do you read the NextJS doc ?
+                  Hey Enoch, did you read the Nextjs doc?
                 </span>
               </div>
             </li>
@@ -1164,7 +1164,7 @@
               <a href="#" class="block relative">
                 <img
                   alt="profil"
-                  src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/5_tf2pp8.jpg"
+                  src="/images/1.jpg"
                   class="mx-auto object-cover rounded-full h-10 w-10"
                 />
               </a>
@@ -1177,10 +1177,10 @@
                     ml-2
                   "
                 >
-                  Marie Lou
+                  Enoch
                 </span>
                 <span class="text-sm text-gray-400 dark:text-gray-300 ml-2">
-                  No I think the dog is better...
+                  Yeah! that's one of the best docs
                 </span>
               </div>
             </li>
@@ -1188,7 +1188,7 @@
               <a href="#" class="block relative">
                 <img
                   alt="profil"
-                  src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/6_v4ytve.jpg"
+                  src="/images/3.png"
                   class="mx-auto object-cover rounded-full h-10 w-10"
                 />
               </a>
@@ -1201,10 +1201,10 @@
                     ml-2
                   "
                 >
-                  Ivan Buck
+                  Cristiano
                 </span>
                 <span class="text-sm text-gray-400 dark:text-gray-300 ml-2">
-                  Seriously ? haha Bob is not a children !
+                  Tailwind JIT is a game changer!
                 </span>
               </div>
             </li>
@@ -1212,7 +1212,7 @@
               <a href="#" class="block relative">
                 <img
                   alt="profil"
-                  src="https://res.cloudinary.com/beloved/image/upload/v1623196231/Assets/person/7_slzhzk.jpg"
+                  src="/images/4.jpg"
                   class="mx-auto object-cover rounded-full h-10 w-10"
                 />
               </a>
@@ -1225,10 +1225,10 @@
                     ml-2
                   "
                 >
-                  Marina Farga
+                  Messi
                 </span>
                 <span class="text-sm text-gray-400 dark:text-gray-300 ml-2">
-                  Do you need that deisgn ?
+                  Yeah can confirm that on Austin 3:16
                 </span>
               </div>
             </li>
@@ -1248,5 +1248,5 @@ export default {
       default: '',
     },
   },
-};
+}
 </script>

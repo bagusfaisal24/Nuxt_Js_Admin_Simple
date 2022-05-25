@@ -2,8 +2,8 @@
   <svg
     width="20"
     height="20"
-    fill="currentColor"
     class="m-auto"
+    fill="currentColor"
     viewBox="0 0 2048 1792"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -15,6 +15,6 @@
 
 <script>
 export default {
-  name: 'ProjectsIcon',
+  name: 'TimeManageIcon',
 };
 </script>

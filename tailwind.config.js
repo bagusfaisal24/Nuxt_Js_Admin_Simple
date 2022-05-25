@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,vue}', './components/**/*.{js,vue}'],
+  purge:['./pages/**/*.{js,vue}', './components/**/*.{js,vue}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -9,8 +9,11 @@ module.exports = {
       },
     },
   },
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }

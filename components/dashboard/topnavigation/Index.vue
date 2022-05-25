@@ -149,12 +149,10 @@
             sm:mr-0 sm:right-auto
           "
         >
-          <a href="#" class="block relative">
-            <img
-              alt="Jonathan Ilunga"
-              src="/images/9.jpg"
-              class="h-10 mx-auto object-cover rounded-full w-10"
-            />
+          <a href="#" class="block relative"  @click="doLogout()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
           </a>
         </div>
       </div>
@@ -166,5 +164,13 @@
 export default {
   name: 'TopNavigation',
   inject: ['toggle'],
+  methods:{
+    doLogout(){
+      window.localStorage.removeItem('token');
+      window.localStorage.removeItem('is_login');
+      window.location.reload(true)
+      this.$router.push('/login')
+    }
+  }
 }
 </script>

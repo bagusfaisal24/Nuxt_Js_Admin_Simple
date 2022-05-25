@@ -3,33 +3,13 @@
     <sidenav-item title="Dashboard" to="/">
       <dashboard-icon />
     </sidenav-item>
-
-    <sidenav-item title="Projects" to="/admin/projects">
-      <projects-icon />
+    
+    <sidenav-item title="Account register" to="/admin/account_register">
+      <account-register/>
     </sidenav-item>
 
-    <sidenav-item title="My tasks" to="/admin/tasks">
-      <tasks-icon />
-    </sidenav-item>
-
-    <sidenav-item title="Calendar" to="/admin/calendar">
-      <calendar-icon />
-    </sidenav-item>
-
-    <sidenav-item title="Time Manage" to="/admin/time-manage">
-      <time-manage-icon />
-    </sidenav-item>
-
-    <sidenav-item title="Reports" to="/admin/reports">
-      <reports-icon />
-    </sidenav-item>
-
-    <sidenav-item title="Settings" to="/admin/settings">
-      <settings-icon />
-    </sidenav-item>
-
-    <sidenav-item title="Documentation" to="/admin/documentation">
-      <documentation-icon />
+    <sidenav-item title="History Otp" to="/admin/history_otp">
+      <history-otp/>
     </sidenav-item>
   </ul>
 </template>
@@ -38,27 +18,19 @@
 import SidenavItem from './Item.vue';
 
 /* ICONS */
-import TasksIcon from './icons/Tasks.vue';
-import ReportsIcon from './icons/Reports.vue';
-import CalendarIcon from './icons/Calendar.vue';
-import SettingsIcon from './icons/Settings.vue';
-import ProjectsIcon from './icons/Projects.vue';
 import DashboardIcon from './icons/Dashboard.vue';
-import TimeManageIcon from './icons/TimeManage.vue';
-import DocumentationIcon from './icons/Documentation.vue';
+import AccountRegister from './icons/AccountRegister.vue';
+import HistoryOtp from './icons/HistoryOtp.vue';
+
 
 export default {
   name: 'SidenavItems',
   components: {
-    TasksIcon,
-    ReportsIcon,
     SidenavItem,
-    SettingsIcon,
-    ProjectsIcon,
-    CalendarIcon,
     DashboardIcon,
-    TimeManageIcon,
-    DocumentationIcon,
-  },
+    AccountRegister,
+    HistoryOtp
+  }
 };
+
 </script>

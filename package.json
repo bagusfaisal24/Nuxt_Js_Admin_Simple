@@ -33,11 +33,14 @@
   },
   "dependencies": {
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.13.3",
+    "nuxt-tailvue": "^1.0.95",
+    "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
     "@nuxt/types": "~2.15.0",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",

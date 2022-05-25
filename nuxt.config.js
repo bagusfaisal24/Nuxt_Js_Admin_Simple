@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Salvia-kit Dashboard v3 Nuxt.js',
+    title: 'Vega Tools',
     htmlAttrs: {
       lang: 'en',
     },
@@ -16,7 +16,16 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  publicRuntimeConfig: {
+    baseURL: process.env.API_URL
+  },
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET
+  },
+  env: {
+    API_URL: "http://vegadev-api-sandbox.sinarmasmsiglife.co.id:8687/api-vegatools",
+    API_SECRET: '1234'
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -35,8 +44,10 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    ['nuxt-tailvue', {toast: true}],
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }

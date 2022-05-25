@@ -1,13 +1,3 @@
 <template>
-  <Content />
+<h1></h1>
 </template>
-
-<script>
-import Content from '../components/Content.vue'
-
-export default {
-  components: {
-    Content,
-  },
-}
-</script>

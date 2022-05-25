@@ -52,30 +52,58 @@
                 </div>
             </div>
             <div class="container mx-auto" v-if="dataFound">
-                <div class="flex justify-center">
-                        <table class="table-auto border-separate border border-slate-500" v-if="dataFound">
-                                <thead>
-                                    <tr>
-                                    <th>No Polis</th>
-                                    <th>No Hp</th>
-                                    <th>Username</th>
-                                    <th>ID Simultan</th>
-                                    <th>Reg SPAJ</th>
-                                    <th>Account DPLK</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td>{{this.pengguna.no_polis}}</td>
-                                    <td>{{this.pengguna.no_hp}}</td>
-                                    <td>{{this.pengguna.nama_pengguna}}</td>
-                                    <td>{{this.pengguna.id_simultan}}</td>
-                                    <td>{{this.pengguna.reg_spaj}}</td>
-                                    <td>{{this.pengguna.acc_no_dplk}}</td>
-                                    </tr>
-                                </tbody>
-                        </table>
+            <div class="p-3">
+                <div class="overflow-x-auto">
+                    <table class="table-auto w-full">
+                        <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                            <tr>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.no_polis">
+                                    <div class="font-semibold text-left">No Polis</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.no_hp">
+                                    <div class="font-semibold text-left">No Hp</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.nama_pengguna">
+                                    <div class="font-semibold text-left">Username</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.id_simultan">
+                                    <div class="font-semibold text-center">ID Simultan</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.reg_spaj">
+                                    <div class="font-semibold text-center">Reg SPAJ</div>
+                                </th>
+                                <th class="p-2 whitespace-nowrap" v-if="this.pengguna.acc_no_dplk">
+                                    <div class="font-semibold text-center">Account DPLK</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr>
+                                <td class="p-2 whitespace-nowrap" v-if="this.pengguna.no_polis">
+                                    <div class="flex items-center">
+                                        <div class="text-left font-medium text-gray-800">{{this.pengguna.no_polis}}</div>
+                                    </div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap" v-if="this.pengguna.no_hp">
+                                    <div class="text-left font-medium text-gray-800">{{this.pengguna.no_hp}}</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap">
+                                    <div class="text-left font-medium text-green-800">{{this.pengguna.nama_pengguna}}</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap" v-if="this.pengguna.id_simultan">
+                                    <div class="text-left font-medium text-gray-800">{{this.pengguna.id_simultan}}</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap" v-if="this.pengguna.reg_spaj">
+                                    <div class="text-left font-medium text-gray-800">{{this.pengguna.reg_spaj}}</div>
+                                </td>
+                                <td class="p-2 whitespace-nowrap" v-if="this.pengguna.acc_no_dplk">
+                                    <div class="text-left font-medium text-gray-800">{{this.pengguna.acc_no_dplk}}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -158,15 +186,14 @@ export default {
             .then((res) => {
             this.isLoading();
             this.pengguna = res.data.data
-            if(this.pengguna.error){
+            if(res.data.error){
                 this.dataNotFound = true;
                 this.dataFound = false;
-                this.makeToast(this.pengguna.message);
+                this.makeToast(res.data.message);
             } else {
                 this.dataNotFound = false;
                 this.dataFound = true;
             }
-            console.log(this.pengguna)
             })
         },
         isLoading() {

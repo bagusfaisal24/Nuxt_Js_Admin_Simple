@@ -11,6 +11,9 @@
     <sidenav-item title="History Otp" to="/admin/history_otp">
       <history-otp/>
     </sidenav-item>
+    <sidenav-item title="History Activity" to="/admin/history_activity">
+      <history-activity/>
+    </sidenav-item>
   </ul>
 </template>
 
@@ -21,7 +24,7 @@ import SidenavItem from './Item.vue';
 import DashboardIcon from './icons/Dashboard.vue';
 import AccountRegister from './icons/AccountRegister.vue';
 import HistoryOtp from './icons/HistoryOtp.vue';
-
+import HistoryActivity from './icons/HistoryActivity.vue';
 
 export default {
   name: 'SidenavItems',
@@ -29,7 +32,8 @@ export default {
     SidenavItem,
     DashboardIcon,
     AccountRegister,
-    HistoryOtp
+    HistoryOtp,
+    HistoryActivity
   }
 };
 

@@ -69,6 +69,106 @@
                 <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status" v-if="is_loading"/>
              </div>
         </div>
+      <div class="flex justify-center" v-if="showData">
+        <div class="block mb-16 px-3 md:px-8 w-full bg-white shadow">
+          <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Data</h5>
+          <p class="text-gray-700 text-base mb-4">
+             <table class="table-auto w-full">
+               <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                 <tr>
+                   <th class="p-2 whitespace-nowrap">
+                      <div class="font-semibold text-left">Request Data</div>
+                   </th>
+                   <th class="p-2 whitespace-nowrap">
+                      <div class="font-semibold text-left">Response Data</div>
+                   </th>
+                   <th class="p-2 whitespace-nowrap">
+                      <div class="font-semibold text-left">Message Error</div>
+                   </th>
+                 </tr>
+               </thead>
+               <tbody class="text-sm divide-y divide-gray-100">
+                   <td class="p-2 whitespace-nowrap">
+                    <textarea
+                      class="
+                        form-control
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      "
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                      v-model="this.requestData"
+                      disabled/>
+                   </td>
+                   <td class="p-2 whitespace-nowrap">
+                      <div class="flex items-left">
+                       <textarea
+                      class="
+                        form-control
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      "
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                      v-model="this.responseData"
+                      disabled/>
+                      </div>
+                   </td>
+                   <td class="p-2 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <textarea
+                      class="
+                        form-control
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      "
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                      v-model="this.messageData"
+                      disabled/>
+                      </div>
+                   </td>
+               </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
       <div class="container mx-auto">
             <div class="p-3">
                 <div class="overflow-x-auto">
@@ -111,7 +211,8 @@
                                     </div>
                                 </td>
                                 <td class="p-2 whitespace-nowrap">
-                                 <button type="button" class="inline-block px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out">Details</button>
+                                 <button type="button" class="inline-block px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out"
+                                 @click="showCardData(obj)">Details</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -136,7 +237,11 @@ export default {
       keyActivity:null,
       selectedOption:null,
       options:null,
-      historyActivity:null
+      historyActivity:null,
+      showData: false,
+      requestData:null,
+      responseData:null,
+      messageData:null
     }
   },
   created(){
@@ -211,6 +316,28 @@ export default {
             }
           }
         });
+    },
+    showCardData(data){
+      if(data != null){
+        this.requestData = this.parseJson(data.process_desc)
+        this.responseData = this.parseJson(data.process_result);
+        this.messageData = data.err;
+        this.showData = true;
+      }
+    },
+    parseJson(data){
+      let a = null;
+      if(data) {
+          try {
+              a = JSON.parse(data);
+          } catch(e) {
+              console.log(e);
+          }
+      }
+      if (a !== null){
+        return JSON.stringify(a, null, 2);
+      }
+      return a;
     }
   }
 }

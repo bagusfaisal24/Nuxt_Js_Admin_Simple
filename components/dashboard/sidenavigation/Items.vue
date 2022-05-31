@@ -11,8 +11,13 @@
     <sidenav-item title="History Otp" to="/admin/history_otp">
       <history-otp/>
     </sidenav-item>
+
     <sidenav-item title="History Activity" to="/admin/history_activity">
       <history-activity/>
+    </sidenav-item>
+
+    <sidenav-item title="Pemegang Polis" to="/admin/pemegang_polis">
+      <pemegang/>
     </sidenav-item>
   </ul>
 </template>
@@ -25,6 +30,8 @@ import DashboardIcon from './icons/Dashboard.vue';
 import AccountRegister from './icons/AccountRegister.vue';
 import HistoryOtp from './icons/HistoryOtp.vue';
 import HistoryActivity from './icons/HistoryActivity.vue';
+import Pemegang from './icons/Pemegang.vue';
+
 
 export default {
   name: 'SidenavItems',
@@ -33,7 +40,8 @@ export default {
     DashboardIcon,
     AccountRegister,
     HistoryOtp,
-    HistoryActivity
+    HistoryActivity,
+    Pemegang
   }
 };
 
